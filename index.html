@@ -4,220 +4,118 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LITH ATELIER | Designový nábytek</title>
-
-<meta name="description" content="LITH ATELIER – ručně tvořené designové stolky a nábytek s osobitým charakterem.">
+<title>LITH ATELIER</title>
 
 <style>
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5f2ec;
-    color: #242321;
-    line-height: 1.6;
+    background: #f7f7f5;
+    color: #222;
 }
 
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+    height: 90px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 22px 6%;
-    background: rgba(245,242,236,0.92);
-    backdrop-filter: blur(12px);
+    justify-content: space-between;
+    padding: 0 7%;
+    background: #f7f7f5;
 }
 
 .logo {
     font-size: 18px;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     font-weight: 500;
 }
 
 nav ul {
-    display: flex;
-    gap: 35px;
     list-style: none;
+    display: flex;
+    gap: 32px;
 }
 
 nav a {
     text-decoration: none;
-    color: #242321;
+    color: #555;
     font-size: 12px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: #111;
 }
 
 .hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    min-height: calc(100vh - 90px);
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 7% 10%;
     gap: 70px;
-    padding: 130px 7% 80px;
 }
 
-.hero-text small {
-    letter-spacing: 5px;
-    color: #77716a;
+.hero-text {
+    width: 45%;
+}
+
+.small {
     font-size: 11px;
+    letter-spacing: 3px;
+    color: #999;
+    margin-bottom: 25px;
 }
 
-.hero h1 {
-    font-size: clamp(55px, 8vw, 110px);
+h1 {
+    font-size: clamp(55px, 7vw, 105px);
     line-height: 0.9;
     font-weight: 400;
-    letter-spacing: -5px;
-    margin: 25px 0;
+    letter-spacing: -4px;
+    margin-bottom: 35px;
 }
 
-.hero p {
-    max-width: 500px;
-    color: #69645e;
-    font-size: 16px;
+.description {
+    max-width: 430px;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 35px;
 }
 
 .button {
     display: inline-block;
-    margin-top: 35px;
-    padding: 15px 25px;
-    background: #292724;
+    padding: 15px 24px;
+    background: #292929;
     color: white;
     text-decoration: none;
-    font-size: 11px;
-    letter-spacing: 2px;
-}
-
-.hero-image {
-    width: 100%;
-    height: 620px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-section {
-    padding: 120px 7%;
-}
-
-.section-label {
-    font-size: 11px;
-    letter-spacing: 4px;
-    color: #8a837b;
-    margin-bottom: 20px;
-}
-
-.about {
-    max-width: 850px;
-}
-
-.about h2 {
-    font-size: clamp(35px, 5vw, 65px);
-    font-weight: 400;
-    line-height: 1.05;
-    margin-bottom: 30px;
-}
-
-.about p {
-    color: #6d6862;
-    max-width: 700px;
-}
-
-.projects {
-    background: #ebe6de;
-}
-
-.projects h2 {
-    font-size: clamp(40px, 6vw, 75px);
-    font-weight: 400;
-    margin-bottom: 60px;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px;
-}
-
-.project {
-    background: #f7f5f1;
-    padding: 15px;
-}
-
-.project img {
-    width: 100%;
-    height: 500px;
-    object-fit: contain;
-    background: #eeeae3;
-    display: block;
-}
-
-.project h3 {
-    font-size: 18px;
-    font-weight: 400;
-    margin-top: 20px;
-}
-
-.project p {
-    color: #817b73;
-    font-size: 13px;
-}
-
-.contact {
-    text-align: center;
-    padding-bottom: 150px;
-}
-
-.contact h2 {
-    font-size: clamp(45px, 7vw, 90px);
-    font-weight: 400;
-    margin-bottom: 25px;
-}
-
-.contact p {
-    color: #77716a;
-}
-
-.contact a {
-    color: #242321;
-}
-
-footer {
-    border-top: 1px solid #d8d2c9;
-    padding: 30px 7%;
-    display: flex;
-    justify-content: space-between;
-    color: #8a837b;
     font-size: 11px;
     letter-spacing: 1px;
 }
 
-/* MOBIL */
+.hero-image {
+    width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+}
+
 @media (max-width: 800px) {
 
     nav {
-        padding: 18px 5%;
+        padding: 0 5%;
     }
 
     nav ul {
-        gap: 15px;
+        gap: 12px;
     }
 
     nav a {
@@ -225,34 +123,21 @@ footer {
     }
 
     .hero {
-        grid-template-columns: 1fr;
-        padding: 120px 5% 60px;
-        gap: 30px;
-    }
-
-    .hero h1 {
-        letter-spacing: -3px;
-    }
-
-    .hero-image {
-        height: 400px;
-    }
-
-    section {
-        padding: 80px 5%;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project img {
-        height: 400px;
-    }
-
-    footer {
         flex-direction: column;
-        gap: 10px;
+        padding: 50px 7%;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        height: 450px;
+    }
+
+    h1 {
+        font-size: 65px;
     }
 }
 </style>
@@ -261,123 +146,76 @@ footer {
 <body>
 
 <nav>
-    <div class="logo">LITH ATELIER</div>
-    
-  <ul>
-    <li><a href="#about">O NÁS</a></li>
-    <li><a href="#projects">PROJEKTY</a></li>
-    <li><a href="#contact">KONTAKT</a></li>
-    <li><a href="https://www.instagram.com/lithatelier/" target="_blank">INSTAGRAM</a></li>
-<li><a href="https://wa.me/420737966656" target="_blank">WHATSAPP</a></li>
-</ul>
+
+    <div class="logo">
+        LITH ATELIER
+    </div>
+
+    <ul>
+        <li>
+            <a href="#about">O NÁS</a>
+        </li>
+
+        <li>
+            <a href="#projects">PROJEKTY</a>
+        </li>
+
+        <li>
+            <a href="https://www.instagram.com/lithatelier/"
+               target="_blank">
+               INSTAGRAM
+            </a>
+        </li>
+
+        <li>
+            <a href="https://wa.me/420737966656"
+               target="_blank">
+               WHATSAPP
+            </a>
+        </li>
+    </ul>
+
 </nav>
 
-<!-- ÚVOD -->
-<section class="hero">
+
+<section class="hero" id="about">
 
     <div class="hero-text">
-        <small>CZECH REPUBLIC · HANDMADE DESIGN</small>
 
-        <h1>LITH<br>ATELIER</h1>
+        <div class="small">
+            HANDMADE DESIGN · CZECH REPUBLIC
+        </div>
 
-        <p>
-            Designové stolky a nábytek tvořené ručně,
-            s důrazem na materiál, detail a osobitý charakter.
+        <h1>
+            LITH<br>
+            ATELIER
+        </h1>
+
+        <p class="description">
+            Originální designové stolky a nábytek tvořené ručně,
+            s důrazem na detail, materiál a osobitý charakter.
         </p>
 
         <a href="#projects" class="button">
             PROHLÉDNOUT PROJEKTY
         </a>
+
     </div>
+
 
     <div class="hero-image">
-        <img src="lith-atelier-detail.jpeg" alt="LITH ATELIER designový stolek">
-    </div>
 
-</section>
-
-<!-- O NÁS -->
-<section id="about">
-
-    <div class="about">
-
-        <div class="section-label">01 / O NÁS</div>
-
-        <h2>
-            Nábytek, který není jen nábytkem.
-        </h2>
-
-        <p>
-            LITH ATELIER vzniká z touhy vytvářet věci, které mají
-            charakter. Každý kus vzniká ručně a každý projekt je
-            trochu jiný.
-            <br><br>
-            Pracujeme s výraznými tvary, strukturou a materiály,
-            které dávají interiéru osobitost.
-        </p>
+        <img
+            src="logo na stole.jpeg"
+            alt="LITH ATELIER – designový stolek"
+        >
 
     </div>
 
 </section>
 
-<!-- PROJEKTY -->
-<section class="projects" id="projects">
 
-    <div class="section-label">02 / PROJEKTY</div>
-
-    <h2>Vybrané realizace</h2>
-
-    <div class="project-grid">
-
-        <div class="project">
-            <img src="Yo Grillz 4.jpeg" alt="LITH ATELIER stolek">
-            <h3>YO GRILLZ</h3>
-            <p>Designový stolek vytvořený na míru.</p>
-        </div>
-
-        <div class="project">
-            <img src="Yo Gz Stul 2.jpeg" alt="LITH ATELIER designový nábytek">
-            <h3>YO GZ</h3>
-            <p>Originální ručně vytvořený kus.</p>
-        </div>
-
-        <div class="project">
-            <img src="Yo Gz Stul 3.jpeg" alt="LITH ATELIER detail">
-            <h3>DETAIL</h3>
-            <p>Struktura, materiál a ruční práce.</p>
-        </div>
-
-        <div class="project">
-            <img src="Yo Gz stul.jpeg" alt="LITH ATELIER projekt">
-            <h3>ATELIER PIECE</h3>
-            <p>Jedinečný kus vytvořený v LITH ATELIER.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- KONTAKT -->
-<section class="contact" id="contact">
-
-    <div class="section-label">03 / KONTAKT</div>
-
-    <h2>Vytvořme něco<br>jedinečného.</h2>
-
-    <p>
-        Máte vlastní představu nebo chcete vytvořit nábytek na míru?
-    </p>
-
-    <a href="mailto:info@lith-atelier.cz" class="button">
-        NAPIŠTE NÁM
-    </a>
-
-</section>
-
-<footer>
-    <span>© 2026 LITH ATELIER</span>
-    <span>HANDMADE DESIGN · CZECH REPUBLIC</span>
-</footer>
+<section id="projects"></section>
 
 </body>
 </html>
