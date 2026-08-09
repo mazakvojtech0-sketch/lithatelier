@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LITHATELIER | Designové stolky</title>
+
+  <meta name="description" content="LITHATELIER – ručně vyráběné designové stolky a nábytek na míru.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f2ed;
+      color: #171512;
+      line-height: 1.5;
+    }
+
+    /* NAVIGACE */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 22px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(245,242,237,0.88);
+      backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 4px;
+    }
+
+    nav a {
+      color: #171512;
+      text-decoration: none;
+      margin-left: 28px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      padding: 150px 6% 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .small {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      margin-bottom: 20px;
+      color: #71695f;
+    }
+
+    h1 {
+      font-size: clamp(55px, 9vw, 120px);
+      line-height: 0.9;
+      letter-spacing: -5px;
+      margin-bottom: 35px;
+    }
+
+    .hero p {
+      max-width: 470px;
+      color: #625d56;
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #171512;
+      color: white;
+      padding: 16px 28px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      background: #38332d;
+    }
+
+    .hero-image {
+      width: 48%;
+      max-width: 650px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* O NÁS */
+
+    section {
+      padding: 110px 6%;
+    }
+
+    .section-title {
+      font-size: clamp(40px, 6vw, 75px);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin-bottom: 50px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about p {
+      color: #625d56;
+      font-size: 18px;
+      max-width: 600px;
+    }
+
+    /* GALERIE */
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      display: block;
+      transition: 0.4s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.015);
+    }
+
+    /* SLUŽBY */
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service {
+      border-top: 1px solid #aaa39a;
+      padding-top: 25px;
+    }
+
+    .service h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .service p {
+      color: #625d56;
+    }
+
+    /* KONTAKT */
+
+    .contact {
+      background: #171512;
+      color: white;
+      text-align: center;
+    }
+
+    .contact .section-title {
+      margin-bottom: 25px;
+    }
+
+    .contact p {
+      color: #c4bfb7;
+      margin-bottom: 35px;
+    }
+
+    .contact .button {
+      background: white;
+      color: #171512;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #171512;
+      color: #777169;
+      text-align: center;
+      padding: 25px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    /* MOBIL */
+
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 18px 5%;
+      }
+
+      nav div:last-child {
+        display: none;
+      }
+
+      .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 130px;
+      }
+
+      .hero-image {
+        width: 100%;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: 400px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGACE -->
+
+  <nav>
+    <div class="logo">LITHATELIER</div>
+
+    <div>
+      <a href="#o-nas">O nás</a>
+      <a href="#projekty">Projekty</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-text">
+
+      <div class="small">Handmade design · Czech Republic</div>
+
+      <h1>LITH<br>ATELIER</h1>
+
+      <p>
+        Originální designové stolky a nábytek tvořené ručně
+        s důrazem na detail, materiál a osobitý charakter.
+      </p>
+
+      <a href="#projekty" class="button">
+        Prohlédnout projekty
+      </a>
+
+    </div>
+
+    <div class="hero-image">
+      <img src="yo%20gz%20stul.jpeg" alt="Designový stolek LITHATELIER">
+    </div>
+
+  </section>
+
+
+  <!-- O NÁS -->
+
+  <section id="o-nas">
+
+    <div class="about">
+
+      <div>
+        <div class="small">01 — O projektu</div>
+
+        <h2 class="section-title">
+          Každý kus<br>
+          je originál.
+        </h2>
+      </div>
+
+      <div>
+        <p>
+          LITHATELIER vzniká z touhy vytvářet nábytek,
+          který není jen praktický, ale stává se součástí
+          prostoru.
+          <br><br>
+          Každý kus vzniká ručně a každý detail prochází
+          našima rukama. Od prvního nápadu až po finální
+          povrch.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJEKTY -->
+
+  <section id="projekty">
+
+    <div class="small">02 — Vybrané projekty</div>
+
+    <h2 class="section-title">
+      Naše práce
+    </h2>
+
+    <div class="gallery">
+
+      <img src="yo%20grilz%204.jpeg" alt="LITHATELIER projekt">
+
+      <img src="yo%20gz%20stul%202.jpeg" alt="LITHATELIER stolek">
+
+      <img src="yo%20gz%20stul%203.jpeg" alt="LITHATELIER stolek">
+
+      <img src="yo%20gz%20stul.jpeg" alt="LITHATELIER design">
+
+    </div>
+
+  </section>
+
+
+  <!-- SLUŽBY -->
+
+  <section>
+
+    <div class="small">03 — Co děláme</div>
+
+    <h2 class="section-title">
+      Od nápadu<br>
+      po realizaci.
+    </h2>
+
+    <div class="services">
+
+      <div class="service">
+        <h3>Design na míru</h3>
+        <p>
+          Navrhneme originální kus přesně podle vašeho
+          prostoru, stylu a představ.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Handmade výroba</h3>
+        <p>
+          Každý produkt vzniká ručně v naší dílně
+          s důrazem na detail.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Originální interiér</h3>
+        <p>
+          Výrazný nábytek pro domácnosti, studia,
+          showroomy, hotely i komerční prostory.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- KONTAKT -->
+
+  <section id="kontakt" class="contact">
+
+    <div class="small">04 — Kontakt</div>
+
+    <h2 class="section-title">
+      Máte nápad?
+    </h2>
+
+    <p>
+      Napište nám a společně vytvoříme něco,
+      co nebude mít nikdo jiný.
+    </p>
+
+    <a href="mailto:info@lithatelier.cz" class="button">
+      Napsat nám
+    </a>
+
+  </section>
+
+
+  <footer>
+    © 2026 LITHATELIER — Handmade design
+  </footer>
+
+</body>
+</html>
